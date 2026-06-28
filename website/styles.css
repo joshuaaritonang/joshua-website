@@ -25,35 +25,39 @@ a:link, a:visited {
 
 .header{
     width: 100%;
-    height: 80px;
     display: flex;                /* Use flexbox */
     align-items: center;          /* Vertically center children */
     justify-content: space-between; /* Space out gif and table */
+    flex-wrap: wrap;
     background-color: aqua;
     margin: auto;
-    padding: 0;
+    padding: 12px 10px;
     border: 2px outset black;
 }
 
 .joshuagif{
     height: 40px;                 /* Match table height for better alignment */
-    margin-left: 16px;            /* Optional: add some left margin */
+    margin-left: 8px;             /* Optional: add some left margin */
 }
 
-table {
+.table {
     border: none;
-    width: 400px;     /* Increased from 400px to 500px */
+    width: auto;
+    max-width: 100%;
     height: 50px;
     font-size: large;
     margin-right: 16px;
     border-collapse: separate;
     border-spacing: 0;
+    table-layout: auto;
 }
+
 .td {
     text-align: center;
     width: 33.33%;
     padding: 0 10px;   /* Reduced from 32px to 10px */
     border: none;
+    white-space: nowrap;
 }
 
 .content-box {
@@ -248,24 +252,32 @@ table {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 12px;
         padding: 12px 10px;
-        height: auto;
     }
 
     .table {
         width: 100%;
         max-width: 100%;
+        margin: 0;
     }
 
     .td {
-        width: auto;
+        display: block;
+        width: 100%;
         padding: 8px 6px;
+        font-size: 0.95rem;
+    }
+
+    .td a {
+        display: block;
+        padding: 10px 0;
     }
 
     .content-box {
         padding: 24px 16px;
         margin: 20px auto;
+        max-width: 760px;
     }
 
     .box-row {
@@ -293,7 +305,7 @@ table {
         justify-content: center;
         gap: 8px;
         padding: 0 10px;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .about-content {
