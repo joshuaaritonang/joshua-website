@@ -1,4 +1,15 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     background-color: #2d1a4d;
     background-image: url("Images/galaxy.jpg");
     background-size: cover;
@@ -230,4 +241,88 @@ table {
     justify-content: center;
     gap: 30px;
     margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 10px;
+        height: auto;
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .td {
+        width: auto;
+        padding: 8px 6px;
+    }
+
+    .content-box {
+        padding: 24px 16px;
+        margin: 20px auto;
+    }
+
+    .box-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .box-row button,
+    .box-wide-button {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px 18px;
+        font-size: 0.95rem;
+    }
+
+    .box-image,
+    .about-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .glitter-cow-stack {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 10px;
+        overflow-x: auto;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .folder-grid {
+        gap: 18px;
+        padding: 0 10px;
+    }
+
+    .image-with-text {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .small-image {
+        width: 60px;
+    }
+
+    .contact-list {
+        font-size: 1.05em;
+    }
 }
